@@ -1,0 +1,31 @@
+{% import "FormGeneratorJY/macros/checkbox.html.twig" as checkbox %}
+{% import "FormGeneratorJY/macros/textarea.html.twig" as textarea %}
+{% import "FormGeneratorJY/macros/select.html.twig" as select %}
+{% import "FormGeneratorJY/macros/text.html.twig" as text %}
+{% import "FormGeneratorJY/macros/hidden.html.twig" as hidden %}
+{% import "FormGeneratorJY/macros/alert.html.twig" as alert %}
+
+{% for name,input in fields %}
+    {% if input.type == "hidden" %}
+        {{ hidden.generate(input) }}
+    {% elseif input.type == "alert" %}
+        {{ alert.generate(input) }}
+    {% else %}
+        {% if not input.hidden %}
+        <div class="form-group has-feedback table-like" id={{input.name}}>
+            
+            {% if formLayout == 'horizontal' %}<div class="col-sm-12">{% endif %}
+                {% if input.type == "textarea" %}
+                    {{ textarea.generate(input) }}
+                {% elseif input.type == "checkbox" %}
+                    {{ checkbox.generate(input) }}
+                {% elseif input.type == "select" %}
+                    {{ select.generate(input) }}
+                {% else %}
+                    {{ text.generate(input) }}
+                {% endif %}
+            {% if formLayout == 'horizontal' %}</div>{% endif %}
+        </div>
+        {% endif %}
+    {% endif %}
+{% endfor %}
