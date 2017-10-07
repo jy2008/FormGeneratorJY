@@ -1,9 +1,9 @@
 {
-    "name": "lcharette/uf_formgeneratorJY",
+    "name": "jy2008/FormGeneratorJY",
     "type": "userfrosting-sprinkle",
     "description": "Form generator for UserFrosting V4",
     "keywords": ["Form", "generator", "userfrosting"],
-    "homepage": "https://github.com/lcharette/UF_FormGeneratorJY",
+    "homepage": "https://github.com/jy2008/FormGeneratorJY",
     "license" : "MIT",
     "authors" : [
         {
