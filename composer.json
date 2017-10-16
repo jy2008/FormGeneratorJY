@@ -11,6 +11,12 @@
             "homepage": "https://github.com/lcharette"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://github.com/jy2008/FormGeneratorJY"
+        },
+    ],
     "require": {
         "jy2008/FormGeneratorJY": "dev-master"
     },
