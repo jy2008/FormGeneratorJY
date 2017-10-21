@@ -17,6 +17,7 @@
             "url":  "https://github.com/jy2008/FormGeneratorJY"
         },
     ],
+    "version": "0.0.1",
     "require": {
         "jy2008/FormGeneratorJY": "dev-master"
     },
